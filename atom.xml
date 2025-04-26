@@ -1,15 +1,15 @@
 <?xml version="1.0" encoding="utf-8"?>
 <feed xmlns="http://www.w3.org/2005/Atom">
     <id>https://SilentUrf.github.io</id>
-    <title>Gridea</title>
-    <updated>2025-04-26T15:36:16.717Z</updated>
+    <title>SilentUrf</title>
+    <updated>2025-04-26T15:41:18.406Z</updated>
     <generator>https://github.com/jpmonette/feed</generator>
     <link rel="alternate" href="https://SilentUrf.github.io"/>
     <link rel="self" href="https://SilentUrf.github.io/atom.xml"/>
     <subtitle>只存在欢呼声 不存在反对</subtitle>
     <logo>https://SilentUrf.github.io/images/avatar.png</logo>
     <icon>https://SilentUrf.github.io/favicon.ico</icon>
-    <rights>All rights reserved 2025, Gridea</rights>
+    <rights>All rights reserved 2025, SilentUrf</rights>
     <entry>
         <title type="html"><![CDATA[云]]></title>
         <id>https://SilentUrf.github.io/post/yun/</id>
