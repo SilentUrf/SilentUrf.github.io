@@ -2,7 +2,7 @@
 <feed xmlns="http://www.w3.org/2005/Atom">
     <id>https://SilentUrf.github.io</id>
     <title>SilentUrf</title>
-    <updated>2025-04-30T12:56:39.826Z</updated>
+    <updated>2025-05-01T05:48:14.651Z</updated>
     <generator>https://github.com/jpmonette/feed</generator>
     <link rel="alternate" href="https://SilentUrf.github.io"/>
     <link rel="self" href="https://SilentUrf.github.io/atom.xml"/>
@@ -11,6 +11,20 @@
     <logo>https://SilentUrf.github.io/images/avatar.png</logo>
     <icon>https://SilentUrf.github.io/favicon.ico</icon>
     <rights>All rights reserved 2025, SilentUrf</rights>
+    <entry>
+        <title type="html"><![CDATA[内部修整]]></title>
+        <id>https://SilentUrf.github.io/post/nei-bu-xiu-zheng/</id>
+        <link href="https://SilentUrf.github.io/post/nei-bu-xiu-zheng/">
+        </link>
+        <updated>2025-05-01T04:00:00.000Z</updated>
+        <content type="html"><![CDATA[<p>作为一个爱好长篇大论的人，我理应为我的作品们寻得一个归处。</p>
+<p>不必隐匿于深宫，不必招摇于市朝，静在一方世外天地便是最好。</p>
+<p>有缘人自会到来。</p>
+<p>而就在多年的桃花源理想被初次尝试之后——</p>
+<p>于是我为你们带来：「你所不知道的SilentUrf之内部修整」</p>
+<p>2025.5.1</p>
+]]></content>
+    </entry>
     <entry>
         <title type="html"><![CDATA[及——论过程]]></title>
         <id>https://SilentUrf.github.io/post/ji-lun-guo-cheng/</id>
