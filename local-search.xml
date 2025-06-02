@@ -116,7 +116,7 @@
     <link href="/2024/03/24/Animation-1/"/>
     <url>/2024/03/24/Animation-1/</url>
     
-    <content type="html"><![CDATA[<audio controls>  <source src="/audios/动画.mp4" type="audio/mpeg"></audio>]]></content>
+    <content type="html"><![CDATA[<video controls width="100%">  <source src="/videos/动画.mp4" type="video/mp4">  <source src="/videos/动画.webm" type="video/webm"></video>]]></content>
     
     
     
