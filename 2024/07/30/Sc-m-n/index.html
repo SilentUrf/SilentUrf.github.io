@@ -19,22 +19,21 @@
   <meta name="author" content="SilentUrf">
   <meta name="keywords" content="">
   
-    <meta name="description" content="&emsp;盛夏的阳光炙烤大地，尖锐的蝉鸣响彻天空。我背着包匆匆回到家中，开门时，表弟一家已经到了。兴许是太热了，我感觉有些头晕。&emsp;不过我却注意到一个不认识的女生，她穿着粉色的校服，脸是一种清澈的美。&emsp;看到她时，我就感到心底有一种很强烈、很奇怪的感觉。&emsp;大人们见我回来便呼我过去，说这位是朋友家的，他们经过时正好碰到她下课就接过来了。我和她简单招呼一番，大概就算是认识了">
+    <meta name="description" content="众所周知，三国杀中神吕蒙的一个技能是涉猎：摸牌阶段，你可以改为亮出牌堆顶的五张牌，然后获得其中每种花色的牌各一张。 研究完四张牌中红&#x2F;黑牌的概率之后，我联想到了这个技能，于是我开始思考涉猎每种摸牌数的概率。由于排列的情况共有4^5&#x3D;1024种，比较复杂，所以我先考虑组合的情况。但是在求总组合数的时候，我发现很难用简单的公式计算出来，于是我尝试进行枚举，并试图找到一些规律。 我将">
 <meta property="og:type" content="article">
-<meta property="og:title" content="实数&amp;虚数">
-<meta property="og:url" content="http://silenturf.github.io/2024/07/12/%E5%AE%9E%E6%95%B0-%E8%99%9A%E6%95%B0/index.html">
+<meta property="og:title" content="Sc(m,n)">
+<meta property="og:url" content="http://silenturf.github.io/2024/07/30/Sc-m-n/index.html">
 <meta property="og:site_name" content="SilentUrf">
-<meta property="og:description" content="&emsp;盛夏的阳光炙烤大地，尖锐的蝉鸣响彻天空。我背着包匆匆回到家中，开门时，表弟一家已经到了。兴许是太热了，我感觉有些头晕。&emsp;不过我却注意到一个不认识的女生，她穿着粉色的校服，脸是一种清澈的美。&emsp;看到她时，我就感到心底有一种很强烈、很奇怪的感觉。&emsp;大人们见我回来便呼我过去，说这位是朋友家的，他们经过时正好碰到她下课就接过来了。我和她简单招呼一番，大概就算是认识了">
+<meta property="og:description" content="众所周知，三国杀中神吕蒙的一个技能是涉猎：摸牌阶段，你可以改为亮出牌堆顶的五张牌，然后获得其中每种花色的牌各一张。 研究完四张牌中红&#x2F;黑牌的概率之后，我联想到了这个技能，于是我开始思考涉猎每种摸牌数的概率。由于排列的情况共有4^5&#x3D;1024种，比较复杂，所以我先考虑组合的情况。但是在求总组合数的时候，我发现很难用简单的公式计算出来，于是我尝试进行枚举，并试图找到一些规律。 我将">
 <meta property="og:locale" content="zh_CN">
-<meta property="article:published_time" content="2024-07-11T16:29:39.000Z">
-<meta property="article:modified_time" content="2025-06-01T02:27:30.654Z">
+<meta property="article:published_time" content="2024-07-30T07:10:58.000Z">
+<meta property="article:modified_time" content="2025-06-02T07:18:59.571Z">
 <meta property="article:author" content="SilentUrf">
-<meta property="article:tag" content="理想现实">
 <meta name="twitter:card" content="summary_large_image">
   
   
   
-  <title>实数&amp;虚数 - SilentUrf</title>
+  <title>Sc(m,n) - SilentUrf</title>
 
   <link  rel="stylesheet" href="https://lib.baomitu.com/twitter-bootstrap/4.6.1/css/bootstrap.min.css" />
 
@@ -200,7 +199,7 @@
       <div class="banner-text text-center fade-in-up">
         <div class="h2">
           
-            <span id="subtitle" data-typed-text="实数&amp;虚数"></span>
+            <span id="subtitle" data-typed-text="Sc(m,n)"></span>
           
         </div>
 
@@ -211,8 +210,8 @@
     
       <span class="post-meta">
         <i class="iconfont icon-date-fill" aria-hidden="true"></i>
-        <time datetime="2024-07-12 00:29" pubdate>
-          2024年7月12日 凌晨
+        <time datetime="2024-07-30 15:10" pubdate>
+          2024年7月30日 下午
         </time>
       </span>
     
@@ -223,7 +222,7 @@
       <span class="post-meta mr-2">
         <i class="iconfont icon-chart"></i>
         
-          1.7k 字
+          898 字
         
       </span>
     
@@ -234,7 +233,7 @@
         
         
         
-          15 分钟
+          8 分钟
         
       </span>
     
@@ -271,14 +270,19 @@
       <div class="container nopadding-x-md" id="board-ctn">
         <div id="board">
           <article class="post-content mx-auto">
-            <h1 id="seo-header">实数&amp;虚数</h1>
+            <h1 id="seo-header">Sc(m,n)</h1>
             
             
               <div class="markdown-body">
                 
-                <p>&emsp;盛夏的阳光炙烤大地，尖锐的蝉鸣响彻天空。我背着包匆匆回到家中，开门时，表弟一家已经到了。<br>兴许是太热了，我感觉有些头晕。<br>&emsp;不过我却注意到一个不认识的女生，她穿着粉色的校服，脸是一种清澈的美。<br>&emsp;看到她时，我就感到心底有一种很强烈、很奇怪的感觉。<br>&emsp;大人们见我回来便呼我过去，说这位是朋友家的，他们经过时正好碰到她下课就接过来了。我和她简单招呼一番，大概就算是认识了罢。<br>&emsp;应该是年级相同，她对我很开朗。<br>&emsp;她的数学倒是很好，暑假也在上市里的数学课，这大概是她穿校服的原因了。她说她在梧桐上学，我在脑中思索一番却想不起相关的记忆了。<br>&emsp;她忽然问我年段中我的朋友w是否和我同班，我答没有，也奇怪她怎么知道w，她说w也在市里上课，这倒是不奇怪了。我笑道w的数学确实是很好，年级中没有几个比他好的，她却忽然把脸凑到我边上说：“你的数学不也很好嘛，我觉得你比他更好！”我的脸瞬间地通红，大概不是因为受到了别人的极高的褒奖，而是因为她的脸离我的脸非常之近。<br>&emsp;一种很突然的感觉，不只是惊吓和害羞，一种异样的感觉，一种从未有过的感受。<br>&emsp;阳光映在她清秀的面庞上，她确实很漂亮，言语难以形容的漂亮。<br>&emsp;她或许看我被吓到了，便笑起来，一种无法形容的笑，很开朗的笑，很活泼的笑，很明媚的笑。<br>&emsp;我有些拘谨和尴尬的笑了笑，她可能看我很紧张，就从包里翻出一道题让我看看，是一道排列组合的题：“梦境中所形成的事件及场景来自于人们已有的认知以及记忆，从五个记忆片段中选择三个片段按顺序拼接组成一个梦，共有多少种拼接方法？”<br>&emsp;题很简单，题目倒有点意思。但是排列组合的知识大概是两年前学的了，长期无用又有些遗忘，我也不是很确定自己的答案。于是我思索几秒，问道：“5A3还是…..？”恰巧这时表弟拿了三瓶饮料过来，她只笑着跟我说答对了，便转过去接了饮料递给我，5A3还是5A5的疑问被中断了，我又不便再问，只好自己看着那道题发愣，努力回忆相关的东西。<br>&emsp;七月真的很热，阳光没有停息地照耀了一整个下午。<br>&emsp;&emsp;∵e^ix&#x3D;cos x+i sin x<br>&emsp;&emsp;∴e^i(a+b)&#x3D;cos(a+b)+i sin(a+b)<br>&emsp;&emsp;  e^ia·e^ib&#x3D;cos(a+b)+i sin(a+b)<br>&emsp;&emsp;  cos a cos b-sin a sin b + i(sin a cos b+sin b cos a)&#x3D;cos(a+b)+i sin(a+b)<br>&emsp;&emsp;∴cos(a+b)&#x3D;cos a cos b-sin a sin b,sin(a+b)&#x3D;sin a cos b+sin b cos a<br>&emsp;她看到我之前在白板上用欧拉公式推导两角和公式的过程，忽然问我最后一步是怎么做出来的，我想了想说：“两边相等，所以实部等于实部，虚部等于虚部吧。”她又问实部和虚部之间不会因为运算产生联系吗，我应道：“不会吧，就像之前有理数和无理数那种一样。”她忽然有些悲伤地说道：“实数和虚数之间确实有难以跨越的界限啊。”她接着又和我聊起实数和虚数。<br>&emsp;说起虚数，她倒是挺有了解，她很有兴致地跟我说道从人们在很早就发现了虚数——负数的平方根，但是因为其没有意义所以并不被认同其存在。17世纪，笛卡尔给出“虚数”的名称时本意就是虚构的东西，与实数相对。但是看似完全相反，相对的二者组合在一起却也诞生出了称得上最完美的欧拉公式呢。<br>&emsp;“相对而相生，数之间的联系就是这样复杂而神秘啊。”她感慨道。突然，她又把脸凑到我面前问：“你知道导数和洛必达法则吗？”<br>&emsp;我又被她吓了一跳。<br>&emsp;她似乎很喜欢把脸凑到我面前，我感觉这样偏亲密的举动对于两个相识不久的人有点奇怪，但是事实上她的身上确实有一种让我无法拒绝、无法抵抗、无法忘记的魅力，足以让我忽视其他考虑的魅力。<br>&emsp;事实。？<br>&emsp;我欣然接受这种亲密。<br>&emsp;我欣然享受这种亲密。<br>&emsp;我又忽的一阵头晕，恍惚之间。我感觉我好像和她牵着手走在一起，身边是其他朋友，我们说着笑着走在路上，我感到我的身旁和我的手上有一种特别的温暖。不同于热量的传递那么简单，是一种让我不愿松手的温暖。<br>&emsp;像她的笑容，像她的魅力一样的感觉。<br>&emsp;我真想握着她的手走下去，走到永远。<br>&emsp;我不清楚此时我和她是什么关系，说真的我不在乎这些有的没的，我只是非常享受和她在一起的每一刻，当然如果那种关系能让这种时间长一些的话，<br>&emsp;我当然会很在乎。<br>&emsp;我环顾四周，看建筑和附近的人们好像是在学校中，可我又诧异学校中似乎没有眼前和脚下的高楼。我想我可能是出现幻觉了，毕竟她怎么会在我的学校里。<br>&emsp;她怎么会在我的身边。？<br>&emsp;又是一阵晕眩。<br>&emsp;我非常想尽力遏制住晕眩的症状，想看清周围究竟是怎样的一种情况，一片刻的纠缠过后，我终于醒过来了。<br>&emsp;我怎么醒过来了。？<br>&emsp;原来是一场梦？我忽然很努力的闭上眼，又倒下去，企图再次回到梦境中，再次遇见她。<br>&emsp;可惜我已经醒过来了。<br>&emsp;我又忽的一阵头晕，我以为是睡意重回了，甚至有一丝欣喜。<br>&emsp;可惜并不是。<br>&emsp;可惜晕眩之后，我对她的记忆甚至模糊了几分。<br>&emsp;想到我可能再也见不到她了，是一阵剧烈的失落和沮丧。<br>&emsp;心如空楼。</p>
-<p>&emsp;没有虚数的话，实数就不是复数了。</p>
-<p>&emsp;作于2024.7.12以纪念2024.7.9夜</p>
+                <p>众所周知，三国杀中神吕蒙的一个技能是涉猎：摸牌阶段，你可以改为亮出牌堆顶的五张牌，然后获得其中每种花色的牌各一张。</p>
+<p>研究完四张牌中红&#x2F;黑牌的概率之后，我联想到了这个技能，于是我开始思考涉猎每种摸牌数的概率。由于排列的情况共有4^5&#x3D;1024种，比较复杂，所以我先考虑组合的情况。<br>但是在求总组合数的时候，我发现很难用简单的公式计算出来，于是我尝试进行枚举，并试图找到一些规律。</p>
+<p>我将问题简化为从ABCD四个元素中选择5次元素进行组合，并从AAAAA开始，按照每次末位加1的操作进行枚举。依此法枚举，组合中包含的元素数将会越来越少。<br>（运算规定：第n位+1意为将第n位的元素按字母表顺序替换为下一个字母对应的元素，特别注意的是，因为元素只有ABCD，所以当第n位+1时若第n位原本的元素为n，将上一位（第n-1位）的元素+1，进位以及其衍生操作结束后，记录最终发生变化的最前位为第m位，将第m+1位到末位的所有元素全部替换为第m位的元素）</p>
+<p>观察发现，当包含ABCD 4种元素的总组合数为1+3+6+10+15&#x3D;35，包含BCD 3种元素的总组合数为1+2+3+4+5&#x3D;15，包含CD 2种元素的总组合数为1+1+1+1+1+1&#x3D;6，仅包含D 1种元素的总组合数为1。</p>
+<p>同时观察枚举的组合发现，发生使最高位的元素在组合中的个数减少的两次进位之间，其中每次变化的都是后几位，枚举出的情况即为后几位在进行组合。同时在杨辉三角中，第n行的第m个数可表示为 C(n-1，m-1)，所以我尝试联系<a target="_blank" rel="noopener" href="https://baike.baidu.com/item/%E6%9D%A8%E8%BE%89%E4%B8%89%E8%A7%92?fromModule=lemma_search-box">杨辉三角</a>得到一些规律。<br>观察易得按元素由少到多排列，第n项算式中的加数都对应着杨辉三角形第n+k行的第n+k-2个数（其中k为非负整数）组成的这一数列（直观看为一条斜线）；所以每个加数也对应C(n+k-1，n+k-3)（其中k为非负整数），即为从n+k-1个不同元素中取n+k-3个元素的组合数。</p>
+<p>然后我尝试简化运算，通过搜索得知，1+3+6+10+15+21+…….+C（n,n-2）&#x3D;n(n+1)(n+2)&#x2F;6；联系到1+2+3+4+…+n&#x3D;n(n+1)&#x2F;2，我似乎发现了一些规律：按元素由少到多排列，第m项算式的结果可以用公式n(n+1)(n+2)…(n+m-2)&#x2F;(m-1)!计算。<br>我尝试使用第1项和第2项算式进行简单验证，第1项和第2项算式的结果为1和n，按照公式计算，第1项算式的结果为1&#x2F;0!&#x3D;1，第2项算式的结果为n&#x2F;1!&#x3D;n，结果无误。</p>
+<p>联想到<a target="_blank" rel="noopener" href="https://baike.baidu.com/item/%E9%BA%A6%E5%85%8B%E5%8A%B3%E6%9E%97%E5%85%AC%E5%BC%8F/3430023">麦克劳林公式</a>，以此可以简单推导出：<br>从若干个m种不同的元素中选n个元素的总组合数Sc(m,n)&#x3D;1+n+n(n+1)&#x2F;2+n(n+1)(n+2)&#x2F;6+…+n(n+1)(n+2)(n+3)…(n+m-2)&#x2F;(m-1)!</p>
+<p>2024.7.30<br>（类似问题：<a target="_blank" rel="noopener" href="https://ti.luogu.com.cn/problemset/1016">NOIP2014提高组第24题fun函数</a>:fun(项数级别，起始值，最终值)）</p>
 
                 
               </div>
@@ -288,13 +292,6 @@
               <div class="post-metas my-3">
   
   
-    <div class="post-meta">
-      <i class="iconfont icon-tags"></i>
-      
-        <a href="/tags/%E7%90%86%E6%83%B3%E7%8E%B0%E5%AE%9E/" class="print-no-link">#理想现实</a>
-      
-    </div>
-  
 </div>
 
 
@@ -303,8 +300,8 @@
 
   <div class="license-box my-3">
     <div class="license-title">
-      <div>实数&amp;虚数</div>
-      <div>http://silenturf.github.io/2024/07/12/实数-虚数/</div>
+      <div>Sc(m,n)</div>
+      <div>http://silenturf.github.io/2024/07/30/Sc-m-n/</div>
     </div>
     <div class="license-meta">
       
@@ -316,7 +313,7 @@
       
         <div class="license-meta-item license-meta-date">
           <div>发布于</div>
-          <div>2024年7月12日</div>
+          <div>2024年7月30日</div>
         </div>
       
       
@@ -348,9 +345,9 @@
                   <article class="post-prev col-6">
                     
                     
-                      <a href="/2024/07/30/Sc-m-n/" title="Sc(m,n)">
+                      <a href="/2024/08/04/%E5%A4%A9%E7%A9%BA/" title="天空">
                         <i class="iconfont icon-arrowleft"></i>
-                        <span class="hidden-mobile">Sc(m,n)</span>
+                        <span class="hidden-mobile">天空</span>
                         <span class="visible-mobile">上一篇</span>
                       </a>
                     
@@ -358,8 +355,8 @@
                   <article class="post-next col-6">
                     
                     
-                      <a href="/2023/09/23/%E4%BA%91/" title="云">
-                        <span class="hidden-mobile">云</span>
+                      <a href="/2024/07/12/%E5%AE%9E%E6%95%B0-%E8%99%9A%E6%95%B0/" title="实数&amp;虚数">
+                        <span class="hidden-mobile">实数&amp;虚数</span>
                         <span class="visible-mobile">下一篇</span>
                         <i class="iconfont icon-arrowright"></i>
                       </a>
